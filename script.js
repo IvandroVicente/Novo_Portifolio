@@ -19,3 +19,40 @@ function sendEmail(event) {
   document.getElementById('email').value = '';
   document.getElementById('message').value = '';
 }
+
+
+function sendEmail(event) {
+  event.preventDefault();  // Prevents the default form submission
+
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
+  const telefone = document.getElementById('telefone').value;
+  const message = document.getElementById('assunto').value;
+
+  // Send the data to a server for sending the email
+  fetch('sendEmail.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      nome: nome,
+      email: email,
+      telefone: telefone,
+      message: message
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert(data.message);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+  // Clear the form
+  document.getElementById('nome').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('telefone').value = '';
+  document.getElementById('message').value = '';
+}
