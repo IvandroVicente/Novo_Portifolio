@@ -261,9 +261,7 @@
             <div class="div_1_contact">
                  <h2>Entre Em Contato Comigo</h2>
 
-                 <form action="https://novo-portifolio-three.vercel.app/ivandroufr2020@gmail.com" 
-                 method="post"
-                 onsubmit="return validateForm()">
+                 <form id="contactForm" onsubmit="return sendEmail(event)">
 
                       <input type="text" name="nome" id="nome" placeholder="Seu nome" required><br>
 
