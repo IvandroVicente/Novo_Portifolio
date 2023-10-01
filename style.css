@@ -366,8 +366,8 @@ li a:hover{
     background-position: center;
     background-size: 100% 100%;
     width: 100%;
-    padding: 100px 50px;
-    padding-bottom: 100px;
+    padding: 100px 75px;
+    padding-bottom: 150px;
 }
 
 .about{
@@ -534,5 +534,136 @@ li a:hover{
     font-family: var(--font-family);
 }
 
+
+/*==========================================================*/
+
+
+.div-contact{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-image: url(../../img/copy.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+
+.div_1_text{
+    display: flex;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    padding: 20px 130px;
+}
+
+.div_1_text h1{
+    font-size: 35px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    color: #efefef;
+    font-family: 'Krona One', sans-serif;
+}
+
+
+
+.div_1_contact{
+    display: flex;
+    width: 50%;
+    background-color: #000000;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 60px;
+}
+
+.div_1_contact h2{
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    color: #efefef;
+    font-family: var(--font-family);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+    margin-top: 80px;
+}
+
+input{
+    width: auto;
+    height: 40px;
+    background-color: #000000;
+    border: 0px;
+    border-bottom: 1px solid var(--text-color);
+    overflow: none;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    color: var(--text-color-white);
+    font-size: 14px;
+    font-family: var(--font-family);
+    outline: 0;
+}
+
+input:hover{
+     background-color: #000000;
+}
+
+
+input::after{
+    background-color: #000000;
+}
+
+input::placeholder{
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+
+form textarea{
+    background-color: #000000;
+    padding-left: 20px;
+    border: 0px;
+    border-bottom: 1px solid var(--text-color);
+    color: var(--text-color-white);
+    font-size: 14px;
+    font-family: var(--font-family);
+    outline: 0;
+}
+
+textarea::placeholder{
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+
+.button_send{
+    background-color: #0060ff;
+    padding: 10px 10px;
+    color: var(--text-color-white);
+    width: 200px;
+    border: 0px;
+    height: 50px;
+    text-align: center; 
+    font-family: var(--font-family);
+}
+
+.button_send:hover{
+    background-color: var(--text-color);
+    color: var(--text-color-white);
+    cursor: pointer;
+}
 
 
