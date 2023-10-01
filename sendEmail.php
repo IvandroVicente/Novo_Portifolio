@@ -5,9 +5,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $receiverEmail = "ivandroufr2020@gmail.com";  // Substitua pelo seu e-mail
 
   $subject = "Formulário de Contato";
-  $message = "Nome: " . $data['nome']. 
+  $message = "Nome: " . $data['nome'] . 
   "\n\nTelefone: " . $data['telefone'] .
-  "\n\nE-mail: " . $data['email']. 
+  "\n\nE-mail: " . $data['email'] . 
   "\n\nMensagem:\n" . $data['message'];
 
   $headers = 'From: ' . $data['email'] . "\r\n" .

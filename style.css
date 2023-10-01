@@ -1,8 +1,3 @@
-*{ 
-  box-sizing: border-box; 
-  margin:0px; 
-}
-
 :root{
     --bg-color: #111215;
     --second-bg: #151921;
@@ -13,22 +8,33 @@
     --font-family: 'Poppins', sans-serif;
 }
 
-a{
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+}
+
+a {
+  color: var(--text-color-white);
   text-decoration: none;
 }
 
-.container{
-    background-color: var(--bg-color);
-}
-
 .div-menu-header{
-    background-image: url(../../img/grade.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--second-bg);
+    justify-content: center;
+    padding: 10px 80px;
+    background-image: url(../../img/copy.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100%;
-    padding: 0px 50px;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
 }
 
 .container-menu{
@@ -93,7 +99,8 @@ li a:hover{
     color: var(--text-color-white);
 }
 
-/*==================================End-Menu=====================================*/
+
+/*FIM MENU*/
 
 .div-middle-image{
     width: 100%;
@@ -208,9 +215,6 @@ li a:hover{
     font-family: var(--font-family);
 }
 
-
-/*=====================================================================*/
-
 .div-social-footer{
     display: flex;
     align-items: center;
@@ -289,85 +293,89 @@ li a:hover{
     transition: transform 0.5s ease;
 }
 
+/*FIM HEADER*/
 
 
+.container{
 
-/*================================================================================================*/
+}
+
+/*MINHAS EXPEREINCIAS*/
 
 .arquivos-expereience{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     background-color: var(--second-bg);
-     width: 100%;
-     justify-content: center;
-     padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--second-bg);
+    width: 100%;
+    justify-content: center;
+    padding: 120px 80px;
 }
 
 .arquivos-expereience h1{
-    font-size: 35px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: var(--font-family);
-    color: #efefef;
-    font-family: 'Krona One', sans-serif;
+   font-size: 35px;
+   letter-spacing: 2px;
+   font-weight: 600;
+   text-transform: uppercase;
+   font-family: var(--font-family);
+   color: #efefef;
+   font-family: 'Krona One', sans-serif;
 }
 
 .div-1-arquivo{
-    display: flex;
-    margin-top: 100px;
-    flex-direction: row;
-    width: 100%;
+   display: flex;
+   margin-top: 100px;
+   flex-direction: row;
+   width: 100%;
 }
 
 .div-text-year{
-    width: 30%;
-    padding: 20px 20px;
-    border-right: 0.5px solid #efefef;
+   width: 30%;
+   padding: 20px 20px;
+   border-right: 0.5px solid #efefef;
 }
 
 .div-text-year h1{
-    font-size: 35px;
-    font-weight: 600;
-    color: #efefef;
-    font-family: 'Krona One', sans-serif;
+   font-size: 35px;
+   font-weight: 600;
+   color: #efefef;
+   font-family: 'Krona One', sans-serif;
 }
 
 .div-text-archive{
-    width: 70%;
-    padding: 20px 40px;
+   width: 70%;
+   padding: 20px 40px;
 }
 
 .div-text-archive h1{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
-    color: var(--text-color-white);
-    font-family: 'Krona One', sans-serif;
-    margin-bottom: 30px;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 30px;
+   color: var(--text-color-white);
+   font-family: 'Krona One', sans-serif;
+   padding-bottom: 30px;
 }
 
 .div-text-archive p{
-    font-size: 13px;
-    line-height: 24px;
-    text-align: justify;
-    font-weight: 400;
-    color: var(--text-color-sub-tit);
-    font-family: var(--font-family);
+   font-size: 13px;
+   line-height: 24px;
+   text-align: justify;
+   font-weight: 400;
+   color: var(--text-color-sub-tit);
+   font-family: var(--font-family);
 }
 
+/* FIM MINHAS EXPEREINCIAS*/
 
-/*==================================================================*/
+/*Projetos e sobre mim*/
 
-#about-project{
-    background-image: url(../../img/copy.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
+.about-project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--second-bg);
     width: 100%;
-    padding: 100px 75px;
-    padding-bottom: 150px;
+    justify-content: center;
 }
 
 .about{
@@ -375,6 +383,12 @@ li a:hover{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    background-image: url(../../img/copy.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0px;
 }
 
 .about-me{
@@ -453,14 +467,19 @@ li a:hover{
     text-align: center;
 }
 
-/*======================================================================*/
+/*Section projet*/
 
 .project{
     display: flex;
-    margin-top: 120px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url(../../img/copy.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    padding: 100px 0px;
 }
 
 .project h1{
@@ -537,17 +556,45 @@ li a:hover{
 
 /*==========================================================*/
 
+/*TESTEMONIAL*/
+
+.section-testemonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--second-bg);
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    padding: 120px 80px;
+}
+
+.section-testemonial h1{
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    color: #efefef;
+    font-family: 'Krona One', sans-serif;
+}
+
+
+
+/*CONTACT*/
 
 .div-contact{
     display: flex;
     flex-direction: row;
-    width: 100%;
     background-image: url(../../img/copy.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    width: 100%;
+    background-size: cover;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
 }
-
 
 .div_1_text{
     display: flex;
@@ -556,7 +603,7 @@ li a:hover{
     background-position: center;
     background-size: cover;
     align-items: center;
-    padding: 20px 130px;
+    padding: 30px 130px;
 }
 
 .div_1_text h1{
@@ -571,7 +618,6 @@ li a:hover{
 }
 
 
-
 .div_1_contact{
     display: flex;
     width: 50%;
@@ -579,7 +625,7 @@ li a:hover{
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    padding: 60px 60px;
+    padding: 70px 50px;
 }
 
 .div_1_contact h2{
@@ -665,5 +711,3 @@ textarea::placeholder{
     color: var(--text-color-white);
     cursor: pointer;
 }
-
-
