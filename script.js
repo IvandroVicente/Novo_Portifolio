@@ -56,3 +56,10 @@ function sendEmail(event) {
   document.getElementById('telefone').value = '';
   document.getElementById('message').value = '';
 }
+
+
+// Pegando ano atual
+    const anoAtual = new Date().getFullYear();
+
+// Atualiza o elemento HTML com o ano atual
+document.getElementById('anoAtual').innerText = anoAtual;

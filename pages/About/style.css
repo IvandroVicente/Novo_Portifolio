@@ -1,0 +1,97 @@
+:root{
+    --bg-color: #111215;
+    --second-bg: #151921;
+    --text-color: #939393;
+    --text-color-white: #fff;
+    --button-color:#0060ff;
+    --text-color-sub-tit: #efefef;
+    --font-family: 'Poppins', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+}
+
+a {
+  color: var(--text-color-white);
+  text-decoration: none;
+}
+
+.div-menu-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--second-bg);
+    justify-content: center;
+    padding: 0px 80px;
+    padding-bottom: 120px;
+}
+
+.container-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding: 20px 10px;
+}
+
+.div-logo{
+    width: 13%;
+    font-size: 25px;
+    font-family: 'Krona One', sans-serif;
+    color: var(--text-color-white);
+}
+.div-menu{
+    width: 67%;
+    padding-left: 50px;
+}
+
+.list-menu{
+    list-style-type: none;
+    align-items: start;
+    display: flex;
+    gap: 35px;
+    flex-direction: row;
+}
+
+.list-menu li a{
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.list-menu li a:hover{
+    color: var(--text-color-white);
+}
+
+.div-email{
+    display: flex;
+    justify-content: end;
+    width: 20%;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.div-email a{
+    color: var(--text-color);
+}
+
+.div-email a:hover{
+    color: var(--text-color-white);
+}
