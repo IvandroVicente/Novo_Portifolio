@@ -29,8 +29,8 @@ a {
     align-items: center;
     background-color: var(--second-bg);
     justify-content: center;
-    padding: 10px 80px;
-    background-image: url(../../img/copy.png);
+    padding: 0px 80px;
+    background-image: url(../../img/fundo1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -230,6 +230,7 @@ li a:hover{
     flex-direction: column;
 }
 
+
 .experience h1{
     color: var(--text-color-white);
     font-size: 27px;
@@ -383,10 +384,9 @@ li a:hover{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border: 0px;
     width: 100%;
-    background-image: url(../../img/copy.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../../img/fundo1.png)no-repeat center center;
     background-size: cover;
     padding: 100px 0px;
 }
@@ -474,9 +474,8 @@ li a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url(../../img/copy.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    border: 0px;
+    background: url(../../img/fundo1.png)no-repeat center center;
     width: 100%;
     background-size: cover;
     padding: 100px 0px;
@@ -531,29 +530,74 @@ li a:hover{
 }
 
 .btn-more{
+    position: relative;
+    background-color: transparent;
+    color: #e8e8e8;
+    font-size: 17px;
+    font-weight: 600;
+    width: 300px;
+    height: 60px;
     border: 1px solid var(--text-color-sub-tit);
-    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+.btn-more::before{
+    content: "TODOS OS PROJETOS";
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 58px;
-    width: 300px;
-    padding: 20px 20px;
-}
-
-.btn-more{
-    color: var(--text-color-sub-tit);
-    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform: translate(0%,90%);
+    z-index: 99;
+    position: relative;
+    transform-origin: bottom;
+    color: var(--bg-color);
+    background-color: var(--text-color-white);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
     font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.btn-more:hover{
-    color: var(--second-bg);
-    background-color: var(--text-color-sub-tit);
-    font-size: 14px;
+.btn-more::after {
+    content: "MAIS PROJETOS";
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform-origin: top;
+    transform: translate(0%,-100%);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
     font-family: var(--font-family);
+    font-size: 16px;
 }
 
-
+.btn-more:hover::before {
+    transform: translate(0%,0%);
+  }
+  
+  .btn-more:hover::after {
+    transform: translate(0%,-200%);
+  }
+  
+  .btn-more:focus {
+    outline: none;
+  }
+  
+  .btn-more:active {
+    scale: 0.95;
+  }
+  
 /*==========================================================*/
 
 /*TESTEMONIAL*/
@@ -580,13 +624,12 @@ li a:hover{
 }
 
 
-
 /*CONTACT*/
 
 .div-contact{
     display: flex;
     flex-direction: row;
-    background-image: url(../../img/copy.png);
+    background-image: url(../../img/fundo1.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -621,7 +664,7 @@ li a:hover{
 .div_1_contact{
     display: flex;
     width: 50%;
-    background-color: #000000;
+    background-color: var(--bg-color);
     align-items: start;
     justify-content: center;
     flex-direction: column;
@@ -648,7 +691,7 @@ form{
 input{
     width: auto;
     height: 40px;
-    background-color: #000000;
+    background-color: var(--bg-color);
     border: 0px;
     border-bottom: 1px solid var(--text-color);
     overflow: none;
@@ -662,12 +705,12 @@ input{
 }
 
 input:hover{
-     background-color: #000000;
+    background-color: var(--bg-color);
 }
 
 
 input::after{
-    background-color: #000000;
+    background-color: var(--bg-color);
 }
 
 input::placeholder{
@@ -678,7 +721,7 @@ input::placeholder{
 }
 
 form textarea{
-    background-color: #000000;
+    background-color: var(--bg-color);
     padding-left: 20px;
     border: 0px;
     border-bottom: 1px solid var(--text-color);
