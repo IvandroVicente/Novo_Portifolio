@@ -1,13 +1,37 @@
-:root{
+
+:root {
     --bg-color: #111215;
     --second-bg: #151921;
     --text-color: #a4aebd;
     --text-color-white: #fff;
-    --button-color:#0060ff;
+    --button-color: #0060ff;
     --text-color-sub-tit: #efefef;
+    --border-color: #98989845;
     --font-family: 'Poppins', sans-serif;
+    --border-icon-color: #ffffff35;
+    --box-icon-color: #56bcfb83;
+    --box-icon-color2: #56bcfb50;
+    --bg-icon-color:#37373780;
+    --bg-hover-icon-color:#505050aa;
 }
 
+.dark {
+    --bg-color: #effbf8;
+    --second-bg: #fff;
+    --text-color: #111215;
+    --text-color-white: #111215;
+    --button-color: #0060ff;
+    --text-color-sub-tit: #111215;
+    --border-color: #989898;
+    --font-family: 'Poppins', sans-serif;
+    --border-icon-color: #111215;
+    --box-icon-color: #111215;
+    --box-icon-color2: #fff;
+    --bg-icon-color:#fff;
+    --bg-hover-icon-color:#effbf8;
+}
+
+  
 *{
   margin: 0;
   padding: 0;
@@ -27,13 +51,9 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--second-bg);
+    background-color: var(--bg-color);
     justify-content: center;
     padding: 0px 80px;
-    background-image: url(../../img/fundo1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     padding-bottom: 120px;
 }
 
@@ -48,13 +68,13 @@ a {
 }
 
 .div-logo{
-    width: 13%;
+    width: 10%;
     font-size: 25px;
     font-family: 'Krona One', sans-serif;
     color: var(--text-color-white);
 }
 .div-menu{
-    width: 67%;
+    width: 60%;
     padding-left: 50px;
 }
 
@@ -83,8 +103,9 @@ a {
 
 .div-email{
     display: flex;
+    flex-direction: row;
     justify-content: end;
-    width: 20%;
+    width: 30%;
     color: var(--text-color);
     font-family: var(--font-family);
     font-size: 16px;
@@ -101,6 +122,41 @@ a {
 }
 
 
+/*MODE*/
+#toggleBtn {
+    border: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    justify-content: center;
+    background: none;
+    transition: transform 0.5s ease;
+}
+
+.icon {
+    font-size: 16px; /* Ajuste conforme necessário */
+    transition: transform 0.5s ease;
+}
+/* Oculte o ícone do modo escuro inicialmente */
+#toggleBtn #darkIcon {
+    display: none;
+}
+
+#lightIcon {
+    color: #ffde66; /* Ajuste a cor conforme necessário */
+}
+
+/* Adicionando estilos para o ícone do sol (modo claro) no modo escuro */
+.dark #toggleBtn #lightIcon {
+    display: none;
+}
+
+/* Adicionando estilos para o ícone da lua (modo escuro) no modo escuro */
+.dark #toggleBtn #darkIcon {
+    display: inline-block;
+}
+  
+  
 /*FIM MENU*/
 
 .div-middle-image{
@@ -152,7 +208,7 @@ a {
 .img-perfil{
     border-radius: 400px;
     border: 18px solid var(--text-color);
-    border-color: #98989845;
+    border-color: var(--border-color);
     width: 450px;
     height: 650px;
     background-repeat: no-repeat;
@@ -168,7 +224,7 @@ a {
     text-align: center;
     font-size: 40px;
     letter-spacing: 15px;
-    color: #eaeaea;
+    color: var(--text-color-sub-tit);
     font-family: 'Krona One', sans-serif;
 }
 
@@ -250,16 +306,16 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-color: #ffffff35;
+    border-color: var(--border-icon-color);
     border: 1px solid;
-    box-shadow: inset 1px 5px 10px #56bcfb83,
-    inset -1px 5px 10px #56bcfb50;
+    box-shadow: inset 1px 5px 10px var(--box-icon-color),
+    inset -1px 5px 10px var(--box-icon-color2);
     border-radius: 100px;
     gap: 20px;
     flex-direction: column;
     width: 140px;
     padding: 50px 20px;
-    background-color: #37373780;
+    background-color: var(--bg-icon-color);
     height: 210px;
     margin-bottom: 20px;
 }
@@ -270,14 +326,14 @@ a {
     align-items: center;
     justify-content: center;
     border: 1px solid;
-    border-color: #ffffff35;
-    box-shadow: inset 0px 0px 0px #ffffff35;
+    border-color: var(--border-icon-color);
+    box-shadow: inset 0px 0px 0px var(--border-icon-color);
     border-radius: 100px;
     gap: 20px;
     flex-direction: column;
     width: 140px;
     padding: 50px 20px;
-    background-color: #505050aa;
+    background-color: var(--bg-hover-icon-color);
     height: 210px;
     margin-bottom: 20px;
     
@@ -319,7 +375,7 @@ a {
    font-weight: 600;
    text-transform: uppercase;
    font-family: var(--font-family);
-   color: #efefef;
+   color: var(--text-color);
    font-family: 'Krona One', sans-serif;
 }
 
@@ -333,14 +389,16 @@ a {
     margin-top: 50px;
     height: 50px;
     width: 200px;
-    border: 1px solid var(--button-color);
+    background-color:  var(--button-color);
     align-items: center;
     justify-content: center;
     transition: transform 1.5s ease;
+    color: #fff;
 }
 
 .botao-download:hover{
-    background-color: var(--button-color);
+    background-color: var(--text-color);
+    color: #fff
 }
 
 .div-1-arquivo{
@@ -353,13 +411,13 @@ a {
 .div-text-year{
    width: 30%;
    padding: 20px 20px;
-   border-right: 0.5px solid #efefef;
+   border-right: 0.5px solid var(--text-color-sub-tit);
 }
 
 .div-text-year h1{
    font-size: 35px;
    font-weight: 600;
-   color: #efefef;
+   color: var(--text-color-sub-tit);
    font-family: 'Krona One', sans-serif;
 }
 
@@ -406,8 +464,7 @@ a {
     justify-content: center;
     border: 0px;
     width: 100%;
-    background: url(../../img/fundo1.png)no-repeat center center;
-    background-size: cover;
+    background-color: var(--bg-color);
     padding: 100px 0px;
 }
 
@@ -456,8 +513,8 @@ a {
     align-items: center;
     justify-content: center;
     background-color:  #1112151c;
-    box-shadow: inset 1px 5px 20px #56bcfb88,
-    inset -1px 5px 20px #56bcfb50;
+    box-shadow: inset 1px 5px 20px var(--box-icon-color),
+    inset -1px 5px 20px var(--box-icon-color2);
     border: 1px solid;
     border-radius: 100%;
     height: 280px;
@@ -495,9 +552,8 @@ a {
     align-items: center;
     justify-content: center;
     border: 0px;
-    background: url(../../img/fundo1.png)no-repeat center center;
+    background-color: var(--bg-color);
     width: 100%;
-    background-size: cover;
     padding: 100px 0px;
 }
 
@@ -507,7 +563,7 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     font-family: var(--font-family);
-    color: #efefef;
+    color: var(--text-color-sub-tit);
     font-family: 'Krona One', sans-serif;
 }
 
@@ -552,7 +608,7 @@ a {
 .btn-more{
     position: relative;
     background-color: transparent;
-    color: #e8e8e8;
+    color: var(--text-color-sub-tit);
     font-size: 17px;
     font-weight: 600;
     width: 300px;
@@ -639,7 +695,7 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     font-family: var(--font-family);
-    color: #efefef;
+    color: var(--text-color-sub-tit);
     font-family: 'Krona One', sans-serif;
 }
 
@@ -649,14 +705,12 @@ a {
 .div-contact{
     display: flex;
     flex-direction: row;
-    background-image: url(../../img/fundo1.png);
-    background-repeat: no-repeat;
-    background-position: center;
     width: 100%;
     background-size: cover;
     align-items: center;
     width: 100%;
     justify-content: center;
+    border-top: 1px solid var(--border-color);
 }
 
 .div_1_text{
@@ -676,7 +730,7 @@ a {
     font-weight: 600;
     text-transform: uppercase;
     font-family: var(--font-family);
-    color: #efefef;
+    color: var(--text-color-sub-tit);
     font-family: 'Krona One', sans-serif;
 }
 
@@ -696,7 +750,7 @@ a {
     letter-spacing: 2px;
     font-weight: 500;
     font-family: var(--font-family);
-    color: #efefef;
+    color: var(--text-color-sub-tit);
     font-family: var(--font-family);
 }
 
@@ -759,9 +813,9 @@ textarea::placeholder{
 }
 
 .button_send{
-    background-color: #0060ff;
+    background-color: var(--button-color);
     padding: 10px 10px;
-    color: var(--text-color-white);
+    color: #fff;
     width: 200px;
     border: 0px;
     height: 50px;
@@ -771,7 +825,7 @@ textarea::placeholder{
 
 .button_send:hover{
     background-color: var(--text-color);
-    color: var(--text-color-white);
+    color: #fff;
     cursor: pointer;
 }
 
@@ -784,7 +838,8 @@ textarea::placeholder{
     gap: 15px;
     background-color: var(--bg-color);
     justify-content: center;
-    border-bottom: 1px solid #5e5e5e6d;;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .follow-icon h3{
