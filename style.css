@@ -324,9 +324,29 @@ a {
    font-family: 'Krona One', sans-serif;
 }
 
+.down_icon{
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.botao-download {
+    display: flex;
+    margin-top: 50px;
+    height: 50px;
+    width: 200px;
+    border: 1px solid var(--button-color);
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease;
+}
+
+.botao-download:hover{
+    background-color: var(--button-color);
+}
+
 .div-1-arquivo{
    display: flex;
-   margin-top: 100px;
+   margin-top: 50px;
    flex-direction: row;
    width: 100%;
 }
