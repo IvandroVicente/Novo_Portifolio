@@ -286,13 +286,12 @@ a {
 .icon-exp{
     font-size: 50px;
     color: var(--text-color-white);
-    transition: transform 0.5s ease;
+    transition: transform 1.5s ease;
 }
 
 .icon-exp:hover{
     color: var(--text-color-white);
-    transform: rotate(360deg);
-    transition: transform 0.5s ease;
+    transform: rotateY(360deg);
 }
 
 /*FIM HEADER*/
@@ -337,7 +336,7 @@ a {
     border: 1px solid var(--button-color);
     align-items: center;
     justify-content: center;
-    transition: transform 0.8s ease;
+    transition: transform 1.5s ease;
 }
 
 .botao-download:hover{

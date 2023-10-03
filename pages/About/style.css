@@ -372,12 +372,12 @@ a {
     width: 120px;
     height: auto;
     filter: grayscale(100%);
-    transition: filter 0.8s ease, transform 0.8s ease; 
+    transition: filter 0.8s ease, transform 1.5s ease; 
 }
 
 .img_skill:hover {
     filter: grayscale(0%);
-    transform: rotateY(180deg); /* Inverte horizontalmente a imagem ao passar o mouse */
+    transform: rotateY(360deg); /* Inverte horizontalmente a imagem ao passar o mouse */
 }
 
 /*SECTION BIO*/
