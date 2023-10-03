@@ -1,14 +1,44 @@
-:root{
+:root {
     --bg-color: #111215;
-    --second-bg: #111215;
+    --second-bg: #151921;
     --text-color: #a4aebd;
     --text-color-white: #fff;
-    --button-color:#0060ff;
+    --button-color: #0060ff;
     --text-color-sub-tit: #efefef;
+    --border-color: #98989845;
     --font-family: 'Poppins', sans-serif;
-    --font-family-korona:'Krona One', sans-serif;
+    --border-icon-color: #ffffff35;
+    --box-icon-color: #56bcfb83;
+    --box-icon-color2: #56bcfb50;
+    --bg-icon-color:#37373780;
+    --bg-hover-icon-color:#505050aa;
+    --item-icon-color: #17191c76;
+    --item-tex-color: #effbf8;
+    --skil-img-color-bg-grey1: rgba(61,65,71,1);
+    --skil-img-color-bg-grey2: rgba(20,22,25,1);
+    --skil-img-color-bg-black: #111215;
 }
 
+.dark {
+    --bg-color: #effbf8;
+    --second-bg: #fff;
+    --text-color: #111215;
+    --text-color-white: #111215;
+    --button-color: #0060ff;
+    --text-color-sub-tit: #111215;
+    --border-color: #989898;
+    --font-family: 'Poppins', sans-serif;
+    --border-icon-color: #111215;
+    --box-icon-color: #111215;
+    --box-icon-color2: #fff;
+    --bg-icon-color:#fff;
+    --bg-hover-icon-color:#effbf8;
+    --item-icon-color: #111215;
+    --item-tex-color: #effbf8;
+    --skil-img-color-bg-grey1: #fff;
+    --skil-img-color-bg-grey2: #effbf8;
+    --skil-img-color-bg-black: #fff;
+}
 *{
   margin: 0;
   padding: 0;
@@ -95,6 +125,41 @@ a {
 .div-email a:hover{
     color: var(--text-color-white);
 }
+
+/*MODE*/
+#toggleBtn {
+    border: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    justify-content: center;
+    background: none;
+    transition: transform 0.5s ease;
+}
+
+.icon {
+    font-size: 16px; /* Ajuste conforme necessário */
+    transition: transform 0.5s ease;
+}
+/* Oculte o ícone do modo escuro inicialmente */
+#toggleBtn #darkIcon {
+    display: none;
+}
+
+#lightIcon {
+    color: #ffde66; /* Ajuste a cor conforme necessário */
+}
+
+/* Adicionando estilos para o ícone do sol (modo claro) no modo escuro */
+.dark #toggleBtn #lightIcon {
+    display: none;
+}
+
+/* Adicionando estilos para o ícone da lua (modo escuro) no modo escuro */
+.dark #toggleBtn #darkIcon {
+    display: inline-block;
+}
+  
 
 /*Main Section*/
 
@@ -224,13 +289,13 @@ a {
 .tem_icon{
     flex-grow: 1;
     display: grid;
-    background-color: #17191c76;
+    background-color: var(--item-icon-color);
     display: flex;
     gap: 30px;
     flex-direction:column;
     width: 220px;
     height: 250px;
-    border: 1px solid #93939374;
+    border: 1px solid var(--border-color);
     align-items: center;
     justify-content: center;
     transition: transform 0.5s ease;
@@ -243,7 +308,7 @@ a {
 .text_item{
   font-size: 18px;
   font-weight: 400;
-  color: var(--text-color-sub-tit);
+  color: var(--item-tex-color);
 }
 
 .text_item:hover{
@@ -310,7 +375,7 @@ a {
     flex-wrap: wrap;
     padding: 100px 120px;
     gap: 15px;
-    border-bottom: 1px solid #93939374;
+    border-bottom: 1px solid var(--border-color)
 }
 
 .sec_icon_skil h2{
@@ -345,11 +410,11 @@ a {
    display: flex;
    flex-direction: column;
    gap: 10px;
-   background: rgb(61,65,71);
-   background: linear-gradient(180deg, rgba(61,65,71,1) 50%, rgba(20,22,25,1) 88%);
+   background: var(--skil-img-color-bg-grey1);
+   background: linear-gradient(180deg, var(--skil-img-color-bg-grey1) 50%, var(--skil-img-color-bg-grey2) 88%);
    width: 200px;
    height: 220px;
-   border: 1px solid #93939374;
+   border: 1px solid var(--border-color);
    align-items: center;
    justify-content: center;
    margin-bottom: 20px;
@@ -358,11 +423,11 @@ a {
 .skil_img_black{
    display: flex;
    flex-direction: column;
-   background-color: #111215;
+   background-color: var(--skil-img-color-bg-black);
    gap: 10px;
    width: 200px;
    height: 220px;
-   border: 1px solid #93939374;
+   border: 1px solid var(--border-color);
    align-items: center;
    justify-content: center;
    margin-bottom: 20px;
@@ -393,7 +458,7 @@ a {
    display: flex;
    justify-content: center;
    flex-direction: column;
-   border-right: 1px solid #93939374;
+   border-right: 1px solid var(--border-color)
    padding-right: 100px;
 }
 
@@ -439,7 +504,7 @@ a {
 .expertise_sec{
     display: flex;
     padding: 50px 120px;
-    border-bottom: 1px solid #93939374;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .sec_exp{
